@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prácticas de JS</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #1e1e2f;
+      color: #fff;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      font-size: 2rem;
+      color: #00ffe0;
+    }
+
+    .calculadora {
+      background: #2b2b3c;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px;
+      max-width: 300px;
+      width: 100%;
+    }
+
+    .calculadora input[type="text"],
+    .calculadora input[type="number"] {
+      padding: 10px;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    .calculadora button {
+      padding: 10px;
+      font-size: 1.2rem;
+      background-color: #00ffe0;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .calculadora button:hover {
+      background-color: #00c9b7;
+    }
+
+    .respuesta {
+      grid-column: span 2;
+    }
+
+    .enlace {
+      margin-top: 20px;
+    }
+
+    .enlace button {
+      background-color: #ff0080;
+      color: #fff;
+      padding: 10px 20px;
+      font-size: 1rem;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      transition: background-color 0.2s ease;
+    }
+
+    .enlace button:hover {
+      background-color: #cc0066;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Prácticas de JS</h1>
+
+  <div class="calculadora">
+    <input type="number" id="input" placeholder="Número 1">
+    <input type="number" id="input2" placeholder="Número 2">
+
+    <button id="plus">+</button>
+    <button id="rest">-</button>
+    <button id="x">×</button>
+    <button id="divisor">÷</button>
+
+    <input class="respuesta" type="text" name="response" id="response" placeholder="Resultado" readonly>
+  </div>
+
+  <div class="enlace">
+    <a href="mamo.html">
+      <button>Ir a la otra página</button>
+    </a>
+  </div>
+
+  <script src="codigo.js"></script>
+
+</body>
+</html>
